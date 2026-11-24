@@ -1,5 +1,5 @@
 import sys
-def largest():
+def largest(a,b,c):
   print("Enter Three Numbers:")
   
   a=int(input("Enter a: "))
