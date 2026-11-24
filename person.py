@@ -1,21 +1,16 @@
 import sys
-def largest(a,b,c):
-  print("Enter Three Numbers:")
-  
-  a=int(input("Enter a: "))
-  b=int(input("Enter b: "))
-  c=int(input("Enter c: "))
 
-if a>b and a>c:
- print("a is largest:",a)
+def largest(a, b, c):
+    if a >= b and a >= c:
+        return a
+    elif b >= a and b >= c:
+        return b
+    else:
+        return c
 
-elif b>a and b>c:
- print("b is largest:",b)
+if __name__ == "__main__":
+    a = int(sys.argv[1])
+    b = int(sys.argv[2])
+    c = int(sys.argv[3])
 
-elif c>a and c>b:
- print("c is largest:",c)
-
-else:
- print("Two are more numbers are equal:")
-
-largest()
+    print("Largest number:", largest(a, b, c))
